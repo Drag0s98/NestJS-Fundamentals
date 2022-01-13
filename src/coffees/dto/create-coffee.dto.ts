@@ -1,4 +1,4 @@
-import { IsString } from 'class-validator';
+import { IsString } from "class-validator";
 export class CreateCoffeeDto {
   @IsString()
   readonly name: string;
@@ -7,5 +7,5 @@ export class CreateCoffeeDto {
   readonly brand: string;
 
   @IsString({ each: true }) //Each: true indicates that the expected value is an Array of Strings
-  readonly flavours: string[];
+  readonly flavors: string[];
 }
