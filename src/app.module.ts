@@ -6,6 +6,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { CoffeRatingModule } from "./coffe-rating/coffe-rating.module";
 import { DatabaseModule } from "./database/database.module";
 import { ConfigModule } from "@nestjs/config";
+import { CommonModule } from "./common/common.module";
 import * as Joi from "@hapi/joi";
 import appConfig from "./config/app.config";
 
@@ -33,6 +34,7 @@ import appConfig from "./config/app.config";
     }),
     CoffeRatingModule,
     DatabaseModule,
+    CommonModule,
   ],
   controllers: [AppController],
   providers: [AppService], //Provider: inject dependencies that can create various relationships to each other.
