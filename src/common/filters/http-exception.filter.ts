@@ -6,6 +6,7 @@ import {
 } from "@nestjs/common";
 import { Response } from "express";
 
+//Exception Filters -> Handle and process unhandled exceptions
 @Catch(HttpException)
 export class HttpExceptionFilter<T extends HttpException>
   implements ExceptionFilter
